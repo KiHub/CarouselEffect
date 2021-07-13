@@ -10,6 +10,9 @@ import UIKit
 class ViewController: UIViewController {
     
     
+    var counter = 0
+    
+    
     @IBOutlet weak var redLight: UIView!
     
     @IBOutlet weak var yellowLight: UIView!
@@ -37,7 +40,36 @@ class ViewController: UIViewController {
         view.backgroundColor = #colorLiteral(red: 0.9568627477, green: 0.6588235497, blue: 0.5450980663, alpha: 1)
         
         
+//        switch counter {
+//        case 1:
+//            redLight.alpha = 1
+//        case 2:
+//            yellowLight.alpha = 1
+//
+//        case 3:
+//            greenLight.alpha = 1
+//        default:
+//            return
+//        }
         
+//        if counter == 1 {
+//            redLight.alpha = 1
+//            yellowLight.alpha = 0.3
+//            greenLight.alpha = 0.3
+//        } else if  counter == 2 {
+//            redLight.alpha = 0.3
+//            yellowLight.alpha = 1
+//            greenLight.alpha = 0.3
+//        }  else if  counter == 3 {
+//                redLight.alpha = 0.3
+//                yellowLight.alpha = 0.3
+//                greenLight.alpha = 1
+//        }  else {
+//            redLight.alpha = 0.3
+//            yellowLight.alpha = 0.3
+//            greenLight.alpha = 0.3
+//        }
+//
         
         
         
@@ -46,6 +78,61 @@ class ViewController: UIViewController {
 
 
     @IBAction func startButtonPressed(_ sender: UIButton) {
+        
+       startButton.setTitle("Next", for: .normal)
+  
+       // counter = 0
+        
+        if counter != 3 {
+            counter += 1
+        } else {
+            counter = 0
+            startButton.setTitle("Start", for: .normal)
+        }
+        
+        print(counter)
+        
+        if counter == 1 {
+            redLight.alpha = 1
+            yellowLight.alpha = 0.3
+            greenLight.alpha = 0.3
+        } else if  counter == 2 {
+            redLight.alpha = 0.3
+            yellowLight.alpha = 1
+            greenLight.alpha = 0.3
+        }  else if  counter == 3 {
+                redLight.alpha = 0.3
+                yellowLight.alpha = 0.3
+                greenLight.alpha = 1
+        }  else {
+            redLight.alpha = 0.3
+            yellowLight.alpha = 0.3
+            greenLight.alpha = 0.3
+        }
+        
+        
+//
+//
+//
+//        if redLight.alpha == 1 {
+//            startButton.setTitle("Next", for: .normal)
+//            redLight.alpha = 0.30
+//            yellowLight.alpha = 1
+//        } else if yellowLight.alpha == 1 {
+//            redLight.alpha = 0.30
+//            yellowLight.alpha = 0.30
+//
+//
+//        } else if  {
+//            redLight.alpha = 0.30
+//            yellowLight.alpha = 0.30
+//
+//            greenLight.alpha = 1
+//        } else {
+//            return
+//        }
+        
+        
     }
     
     
