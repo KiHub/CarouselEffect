@@ -66,6 +66,7 @@
                                         </state>
                                     </button>
                                 </subviews>
+                                <variation key="heightClass=compact-widthClass=regular" spacing="22"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
